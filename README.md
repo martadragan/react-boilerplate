@@ -20,31 +20,21 @@ yarn install
 
 ---
 
-## Start the server
+## Starting development
 
-For frontend-only development, you can use the webpack-dev-server:
-
-```shell
-webpack-dev-server --mode development
-```
-
-If you have another server set up (e.g. some kind of *X*AMP package) or you need something more than just Http serving, then don't.
-
----
-
-## Watching the files with webpack
-
-To start watching the files for development:
+To start the server, watch the files and bundle them with webpack for development:
 
 ```shell
-webpack --watch --mode development
+npm run watch
 ```
+
+The URL on which the app is going to be served will be shown in the console output.
 
 ---
 
 ## Using livereload
 
-If you are utilizing some other server and you want livereload, add the following code to the `<head>` of your document:
+If you are utilizing some other server (e.g. some kind of *X*AMP package) and you want livereload, add the following code to the `<head>` of your document:
 
 ```html
 <script src="http://localhost:35729/livereload.js"></script>
@@ -59,5 +49,5 @@ The exact port to use in the URL (e.g. `35729`) can be found in the console afte
 To bundle for production use:
 
 ```shell
-webpack --mode production
+npm run prod
 ```
